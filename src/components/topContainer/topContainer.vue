@@ -4,6 +4,7 @@
         <SentencesInput/>
         <ChangeLanguage/>
         <ChangeTextButton/>
+        <BlackModeButton/>
     </div>
 </template>
 
@@ -12,10 +13,11 @@
     import ChangeTextButton from "./ChangeTextButton/ChangeTextButton";
     import SentencesInput from "./SentencesInput/SentencesInput";
     import ChangeLanguage from "./ChangeLanguage/ChangeLanguage";
+    import BlackModeButton from "./BlackModeButton/BlackModeButton";
 
     export default {
         name: "topContainer",
-        components: {ChangeLanguage, SentencesInput, ChangeTextButton, StartButton}
+        components: {BlackModeButton, ChangeLanguage, SentencesInput, ChangeTextButton, StartButton}
     }
 </script>
 

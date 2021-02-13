@@ -3,6 +3,7 @@
     <AccuracyCounter/>
     <SpeedCounter/>
     <Timer/>
+    <SymbolCounter/>
     <MistakesCounter/>
 </div>
 </template>
@@ -12,9 +13,10 @@
     import SpeedCounter from "./SpeedCounter/SpeedCounter";
     import Timer from "./Timer/Timer";
     import MistakesCounter from "./MistakesCounter/MistakesCounter";
+    import SymbolCounter from "./SymbolCounter/SymbolCounter";
     export default {
         name: "SidePanel",
-        components: {MistakesCounter, Timer, SpeedCounter, AccuracyCounter}
+        components: {SymbolCounter, MistakesCounter, Timer, SpeedCounter, AccuracyCounter}
     }
 </script>
 
@@ -27,7 +29,7 @@
     .SidePanel {
         margin: 0 10px;
         padding: 5px;
-        border: 2px solid black;
+        border: 3px solid black;
         border-radius: 5px;
     }
 </style>

@@ -15,7 +15,8 @@ export default new Vuex.Store({
         focusFlag: true,
         numberOfSentences: 5,
         language: "russian",
-        typingStarted: false
+        typingStarted: false,
+        blackMode: false
     },
     mutations: {
         "INPUT_RIGHT_SYMBOL": state => {
@@ -54,6 +55,9 @@ export default new Vuex.Store({
         },
         "CHANGE_LANGUAGE": (state, language) => {
             state.language = language
+        },
+        "CHANGE_STYLE": state => {
+            state.blackMode = !state.blackMode
         }
     },
     getters: {

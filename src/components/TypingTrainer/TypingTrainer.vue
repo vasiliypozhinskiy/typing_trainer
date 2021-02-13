@@ -3,10 +3,13 @@
         <div class="textField" tabindex="0"
              ref="textField"
              @keypress="InputSymbol($event)"
-             v-bind:class="{invalid: wrongInput}">
-            <span class="inputtedText">{{text.slice(0, currentIndex)}}</span>
-            <span v-bind:class="{invalidSymbol: wrongInput, currentSymbol: typingStarted}">{{text[currentIndex]}}</span>
-            <span class="text">{{text.slice(currentIndex + 1)}}</span>
+             v-bind:class="{invalid: wrongInput, blackMode: BlackMode}">
+            <span class="inputtedText" v-bind:class="{blackMode: BlackMode}">{{text.slice(0, currentIndex)}}</span>
+            <span v-bind:class="{
+                invalidSymbol: wrongInput,
+                currentSymbol: typingStarted,
+                blackMode: BlackMode}">{{text[currentIndex]}}</span>
+            <span class="text" v-bind:class="{blackMode: BlackMode}">{{text.slice(currentIndex + 1)}}</span>
         </div>
     </div>
 </template>
@@ -41,6 +44,9 @@
             },
             typingStarted: function () {
                 return this.$store.state.typingStarted
+            },
+            BlackMode: function () {
+                return this.$store.state.blackMode
             }
         },
         watch: {
@@ -72,19 +78,31 @@
 <style scoped>
     .textField {
         border-radius: 10px;
-        border: 2px solid lime;
+        border: 3px solid lime;
         outline: none;
         margin: 0 auto;
         padding: 5px;
         text-align: justify;
     }
 
+    .textField.blackMode {
+        background-color: black;
+        border: 3px solid green;
+        color: white;
+    }
+
     .invalid {
-        border: 2px solid red;
+        border: 3px solid red;
+    }
+    .invalid.blackMode {
+        border: 3px solid darkred;
     }
 
     .inputtedText {
         color: lime;
+    }
+    .inputtedText.blackMode {
+        color: green;
     }
 
     .currentSymbol {
@@ -94,8 +112,23 @@
         background-color: green;
     }
 
+    .currentSymbol.blackMode {
+        border: 2px solid white;
+        color: black;
+        background-color: wheat;
+    }
+
     .invalidSymbol {
         background-color: red;
         color: black;
+    }
+
+    .invalidSymbol.blackMode {
+        background-color: darkred;
+        color: black;
+    }
+
+    .text.blackMode {
+        color: white;
     }
 </style>
