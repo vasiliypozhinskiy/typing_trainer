@@ -1,11 +1,11 @@
 <template>
     <div class="main">
+        <div>
+            <top-container/>
+        </div>
         <div class="container">
             <TypingTrainer/>
             <SidePanel/>
-        </div>
-        <div>
-            <button-container/>
         </div>
     </div>
 </template>
@@ -13,11 +13,11 @@
 <script>
     import TypingTrainer from "./TypingTrainer/TypingTrainer";
     import SidePanel from "./SidePanel/SidePanel";
-    import ButtonContainer from "./buttonContainer/buttonContainer";
+    import topContainer from "./topContainer/topContainer";
 
     export default {
         name: "TypingTrainerContainer",
-        components: {ButtonContainer, SidePanel, TypingTrainer}
+        components: {topContainer, SidePanel, TypingTrainer}
     }
 </script>
 

@@ -1,15 +1,21 @@
 <template>
     <div class="container">
         <StartButton/>
+        <SentencesInput/>
+        <ChangeLanguage/>
+        <ChangeTextButton/>
     </div>
 </template>
 
 <script>
     import StartButton from "./StartButton/StartButton";
+    import ChangeTextButton from "./ChangeTextButton/ChangeTextButton";
+    import SentencesInput from "./SentencesInput/SentencesInput";
+    import ChangeLanguage from "./ChangeLanguage/ChangeLanguage";
 
     export default {
-        name: "buttonContainer",
-        components: {StartButton}
+        name: "topContainer",
+        components: {ChangeLanguage, SentencesInput, ChangeTextButton, StartButton}
     }
 </script>
 
@@ -17,10 +23,8 @@
     .container {
         display: flex;
         flex-direction: row;
-        margin: 5px auto;
     }
     >>>.button {
-        margin: 5px;
         background-color: darkgray;
         border-radius: 5px;
         outline: none;
@@ -28,5 +32,9 @@
     }
     >>>.button:hover {
         background-color: gray;
+    }
+
+    >>>.bottomElement {
+        margin: 5px;
     }
 </style>

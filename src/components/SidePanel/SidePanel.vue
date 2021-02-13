@@ -3,6 +3,7 @@
     <AccuracyCounter/>
     <SpeedCounter/>
     <Timer/>
+    <MistakesCounter/>
 </div>
 </template>
 
@@ -10,9 +11,10 @@
     import AccuracyCounter from "./AccuracyCounter/AccuracyCounter";
     import SpeedCounter from "./SpeedCounter/SpeedCounter";
     import Timer from "./Timer/Timer";
+    import MistakesCounter from "./MistakesCounter/MistakesCounter";
     export default {
         name: "SidePanel",
-        components: {Timer, SpeedCounter, AccuracyCounter}
+        components: {MistakesCounter, Timer, SpeedCounter, AccuracyCounter}
     }
 </script>
 

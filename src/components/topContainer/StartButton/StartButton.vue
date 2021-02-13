@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <input class="button" type="button" value="Start" @click="Start">
+    <div class="bottomElement">
+        <input class="button" type="button" value="Старт" @click="Start">
     </div>
 </template>
 
