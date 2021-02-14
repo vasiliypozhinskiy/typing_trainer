@@ -35,5 +35,6 @@
     .numberInput {
         outline: none;
         border-radius: 5px;
+        width: 3em;
     }
 </style>
