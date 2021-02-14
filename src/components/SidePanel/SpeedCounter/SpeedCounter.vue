@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            Скорость
+            Скорость, зн./мин.
         </div>
         <div class="counter" v-text="speed">
         </div>

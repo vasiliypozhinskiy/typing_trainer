@@ -25,6 +25,10 @@
     .main {
         width: 80%;
         margin: 0 auto;
+        padding: 5px;
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: white;
     }
     .container {
         display: flex;

@@ -1,6 +1,6 @@
 <template>
     <div class="bottomElement">
-        <input class="button" type="button" value="Старт" @click="Start">
+        <input class="startButton" type="button" value="Старт" @click="Start">
     </div>
 </template>
 
@@ -26,5 +26,13 @@
 </script>
 
 <style scoped>
-
+    .startButton {
+        background-color: #E90000;
+        border-radius: 5px;
+        outline: none;
+        transition-duration: 0.5s;
+    }
+    .startButton:hover {
+        background-color: #A00000;
+    }
 </style>

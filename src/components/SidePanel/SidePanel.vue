@@ -27,9 +27,9 @@
         margin: 0 auto;
     }
     .SidePanel {
-        margin: 0 10px;
+        margin-left: 10px;
         padding: 5px;
         border: 3px solid black;
-        border-radius: 5px;
+        border-radius: 10px;
     }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>
-            Время
+            Время, сек.
         </div>
         <div class="counter" v-text="time">
         </div>

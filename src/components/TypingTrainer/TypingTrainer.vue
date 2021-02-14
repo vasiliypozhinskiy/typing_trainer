@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <div class="textField" tabindex="0"
              ref="textField"
              @keypress="InputSymbol($event)"

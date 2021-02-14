@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class="container">
         <div>
-            Точность
+            Точность, %
         </div>
         <div class="counter">
             {{accuracy}}
@@ -21,5 +21,7 @@
 </script>
 
 <style scoped>
-
+.container {
+    width: 150px;
+}
 </style>

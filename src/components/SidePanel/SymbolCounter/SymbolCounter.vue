@@ -14,7 +14,7 @@
         name: "SymbolCounter",
         computed: {
             symbols: function () {
-                return this.$store.state.current_index
+                return this.$store.state.text.length
             }
         }
     }
