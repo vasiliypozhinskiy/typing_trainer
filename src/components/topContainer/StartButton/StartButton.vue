@@ -18,8 +18,7 @@
                 this.$store.commit("RESET_TO_DEFAULTS")
                 this.$store.commit("START_TIMER")
                 this.$store.commit("CHANGE_FOCUS")
-                let sound = new Audio(this.startSound)
-                sound.play()
+                this.$store.dispatch("PLAY_SOUND", this.startSound)
             }
         }
     }

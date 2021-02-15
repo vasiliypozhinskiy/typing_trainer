@@ -6,7 +6,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
     state: {
-        text: "Shankle",
+        text: "",
         current_index: 0,
         mistakes: 0,
         attemptCount: 0,
@@ -16,7 +16,8 @@ export default new Vuex.Store({
         numberOfSentences: 5,
         language: "russian",
         typingStarted: false,
-        blackMode: false
+        blackMode: false,
+        volume: 1
     },
     mutations: {
         "INPUT_RIGHT_SYMBOL": state => {
@@ -58,6 +59,9 @@ export default new Vuex.Store({
         },
         "CHANGE_STYLE": state => {
             state.blackMode = !state.blackMode
+        },
+        "CHANGE_VOLUME": (state, volume) => {
+            state.volume = volume
         }
     },
     getters: {
@@ -78,7 +82,11 @@ export default new Vuex.Store({
                 .then(response => {
                     commit("SAVE_TEXT", response.data)
                 })
+        },
+        "PLAY_SOUND": ({state}, sound) => {
+            let audio = new Audio(sound)
+            audio.volume = state.volume
+            audio.play()
         }
-    },
-    modules: {}
+    }
 })

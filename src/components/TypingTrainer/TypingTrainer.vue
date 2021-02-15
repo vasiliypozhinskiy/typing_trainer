@@ -60,14 +60,12 @@
                     if (e.key === this.$store.state.text[this.$store.state.current_index]) {
                         this.$store.commit("INPUT_RIGHT_SYMBOL")
                         if (this.$store.state.text.length === this.$store.state.current_index) {
-                            let sound = new Audio(this.winSound)
-                            sound.play()
+                            this.$store.dispatch("PLAY_SOUND", this.winSound)
                             this.$store.commit("STOP_TIMER")
                         }
                     } else {
                         this.$store.commit("INPUT_WRONG_SYMBOL")
-                        let sound = new Audio(this.errorSound)
-                        sound.play()
+                        this.$store.dispatch("PLAY_SOUND", this.errorSound)
                     }
                 }
             },
@@ -76,11 +74,15 @@
 </script>
 
 <style scoped>
+    .container {
+        flex-grow: 1;
+    }
+
     .textField {
         border-radius: 10px;
         border: 3px solid lime;
         outline: none;
-        margin: 0 auto;
+        width: 100%;
         padding: 5px;
         text-align: justify;
     }

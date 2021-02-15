@@ -5,6 +5,7 @@
         <ChangeLanguage/>
         <ChangeTextButton/>
         <BlackModeButton/>
+        <VolumeInput/>
     </div>
 </template>
 
@@ -14,10 +15,11 @@
     import SentencesInput from "./SentencesInput/SentencesInput";
     import ChangeLanguage from "./ChangeLanguage/ChangeLanguage";
     import BlackModeButton from "./BlackModeButton/BlackModeButton";
+    import VolumeInput from "./VolumeInput/VolumeInput";
 
     export default {
         name: "topContainer",
-        components: {BlackModeButton, ChangeLanguage, SentencesInput, ChangeTextButton, StartButton}
+        components: {VolumeInput, BlackModeButton, ChangeLanguage, SentencesInput, ChangeTextButton, StartButton}
     }
 </script>
 
@@ -38,5 +40,8 @@
 
     >>>.bottomElement {
         margin: 5px;
+        position: relative;
+        display: flex;
+        align-items: center;
     }
 </style>
